@@ -26,6 +26,35 @@ $('#home').on('pageinit', function(){
 			}
 		});
 	});
+	$('#dbRec').on('click', function(){
+		$.ajax({
+			url: '_view/recipes',
+			type: 'GET',
+			dataType: 'json',
+			success:function(data){
+				$.each(data.rows, function(index, recipe){
+					var name = recipe.value.Name;
+					var date = recipe.value.Date;
+					var rating = recipe.value.Rating;
+					var category = recipe.value.Category;
+					var type = recipe.value.Type;
+					var ingredients = recipe.value.Ingredients;
+					var directions = recipe.value.Direction;
+					$('#couchdata').append(
+						$('<ul>' + 
+						'<li>' + "Name:" + ' ' + name + '</li>' +
+						'<li>' + "Date:" + ' ' + date + '</li>' +
+						'<li>' + "Rating:" + ' ' + rating + '</li>' +
+						'<li>' + "Category:" + ' ' + category + '</li>' +
+						'<li>' + "Type:" + ' ' + type + '</li>' +
+						'<li>' + "Ingredients:" + ' ' + ingredients + '</li>' +
+						'<li>' + "Directions:" + ' ' + directions + '</li>' + 
+						'</ul>' + '<br>')
+					);
+				});
+			}
+		});
+	});
 	$('#csvRec').on('click', function(){
 		$.ajax({
 			url: 'xhr/data.csv',

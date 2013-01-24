@@ -64,6 +64,7 @@ ASD 1301
 		    	<li><a href="#ajaxjson" data-role="button" id="jsonRec">View JSON Data</a></li>
 		    	<li><a href="#ajaxcsv" data-role="button" id="csvRec">View CSV Data</a></li>
 		    	<li><a href="#ajaxxml" data-role="button" id="xmlRec">View XML Data</a></li>
+		    	<li><a href="#dbdata" data-role="button" id="dbRec">View DataBase Recipes</a></li>
 		    </ul>
 		</section>
 			
@@ -377,6 +378,30 @@ ASD 1301
 		<section data-role="content">
 			<display id = "xmldata">
 			</display>
+		</section>
+	
+		<!--Footer Navigation Bar-->
+		<footer data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#error" data-icon="search">Find Recipes</a></li><!--Link to some type of API or feed in the future-->
+				</ul>
+			</div>
+		</footer>
+	</div>
+	
+	<!--DataBase  Data Page-->
+	<div data-role="page" id="dbdata" data-add-back-btn="true" data-filter="true">
+		<header data-role="header" data-theme="b" data-position="fixed">
+    		<h1>The Recipe Vault</h1>
+		</header>
+		
+		<section data-role="content" class="ui-body-d">
+		<div data-role="fieldcontain">
+			<ul id = "couchdata">
+			</ul>
+		</div>
 		</section>
 	
 		<!--Footer Navigation Bar-->
