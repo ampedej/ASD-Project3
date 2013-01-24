@@ -49,7 +49,7 @@ $('#home').on('pageinit', function(){
 						'<li>' + "Type:" + ' ' + type + '</li>' +
 						'<li>' + "Ingredients:" + ' ' + ingredients + '</li>' +
 						'<li>' + "Directions:" + ' ' + directions + '</li>' + 
-						'</ul>' + '<br>')
+						'</ul>' + '<br />')
 					);
 				});
 			}
