@@ -7,7 +7,7 @@ ASD 1301
 $('#home').on('pageinit', function(){
 	$('#jsonRec').on('click', function(){
 		$.ajax({
-			url: 'xhr/data.json',
+			url: 'data.json',
 			type: 'GET',
 			dataType: 'json',
 			success: function(response){
@@ -57,7 +57,7 @@ $('#home').on('pageinit', function(){
 	});
 	$('#csvRec').on('click', function(){
 		$.ajax({
-			url: 'xhr/data.csv',
+			url: 'data.csv',
 			type: 'GET',
 			dataType: 'text',
 			success: function(data){
@@ -73,7 +73,7 @@ $('#home').on('pageinit', function(){
 	
 	$('#xmlRec').on('click', function(){
 		$.ajax({
-			url: 'xhr/data.xml',
+			url: 'data.xml',
 			type: 'GET',
 			dataType: 'xml',
 			success: function(xml){
